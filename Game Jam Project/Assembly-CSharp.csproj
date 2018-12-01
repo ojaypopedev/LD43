@@ -62,7 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Game\_Scripts\Boat\BoatController.cs" />
+    <Compile Include="Assets\Game\_Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Game\_Scripts\Manager\changeScene.cs" />
+    <Compile Include="Assets\Game\_Scripts\Manager\Wind.cs" />
+    <Compile Include="Assets\Game\_Scripts\UI\Wind_UI.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>F:/GitHub/UnityGit/Ludum Dare 43/LD43/Game Jam Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

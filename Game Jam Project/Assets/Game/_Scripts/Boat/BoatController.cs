@@ -5,8 +5,11 @@ using UnityEngine;
 public class BoatController : MonoBehaviour {
 
 
-
+    [Range(-20,20)]
     public float directionChange;
+
+    public GameObject manager;
+
 
 	// Use this for initialization
 	void Start () {
@@ -16,12 +19,22 @@ public class BoatController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        MoveTowardsRotation(transform.rotation.eulerAngles.z, 2 * Time.deltaTime, );
+        float speed = manager.GetComponent<Wind>().windStrength;
+        MoveTowardsRotation(transform.rotation.eulerAngles.z, Mathf.Sqrt(speed)* Time.deltaTime, Mathf.Sqrt(Mathf.Sqrt(speed))*directionChange*Time.deltaTime);
 
 
-        if (Input.GetKey("A"))
+        if (Input.GetKey(KeyCode.A))
+        {
+            directionChange = -20;
+        }
+        else if (Input.GetKey(KeyCode.D))
         {
 
+            directionChange = 20;
+        }
+        else
+        {
+            directionChange = 0;
         }
 
 	}

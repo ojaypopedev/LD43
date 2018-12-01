@@ -10,7 +10,7 @@ public class Wind : MonoBehaviour {
     float timeToNextStrength;
 
 
-    public float FullTimeToNextAngle = 2;
+    public float FullTimeToNextAngle = 0.5f;
     float timeToNextAngle;
     public float minStrength = 1;
     public float maxStrength = 20;
@@ -30,17 +30,14 @@ public class Wind : MonoBehaviour {
 
 
         WindStrength();
-        WindAngle();
-       
+        SetWindAngle();
 
-
-
-
+        //print(windAngle);
 
     }
 
 
-    void WindAngle()
+    void SetWindAngle()
     {
 
         if (timeToNextAngle > 0)
@@ -53,23 +50,46 @@ public class Wind : MonoBehaviour {
 
 
           newAngle = windAngle + Random.Range(-20, 20);
-            if (Random.Range(0, 2) > 1)
+            if (true)
             {
                 ChangeAngle = true;
             }
             else
             {
                 timeToNextAngle = FullTimeToNextAngle;
-            }
+            }  
 
-            
+
 
         }
 
 
         if (ChangeAngle)
         {
-            if(WindAngle <)
+            if(windAngle < newAngle)
+            {
+                windAngle += 10 * Time.deltaTime;
+            }
+            else if(windAngle > newAngle)
+            {
+                windAngle += 10 * Time.deltaTime;
+            }
+
+            if (Mathf.Abs(windAngle - newAngle) < 1)
+            {
+                windAngle = newAngle;
+                ChangeAngle = false;
+                timeToNextAngle = FullTimeToNextAngle;
+                if(windAngle > 360)
+                {
+                    windAngle -= 360;
+                }
+
+                if(windAngle < 0)
+                {
+                    windAngle += 360;
+                }
+            }
 
 
 
@@ -95,6 +115,7 @@ public class Wind : MonoBehaviour {
 
             if (windStrength < minStrength)
             { windStrength = minStrength; }
+            // windStrength = 5;
 
 
             timeToNextStrength = FullTimeToNextStrength;

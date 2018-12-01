@@ -61,10 +61,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Food.cs" />
+    <Compile Include="Assets\Game\_Scripts\Boat\AssignJob.cs" />
+    <Compile Include="Assets\Game\_Scripts\Boat\Boat_Weight.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\BoatController.cs" />
+    <Compile Include="Assets\Game\_Scripts\Camera\boatCamera.cs" />
     <Compile Include="Assets\Game\_Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Game\_Scripts\crew\reactiveCrew.cs" />
     <Compile Include="Assets\Game\_Scripts\Manager\changeScene.cs" />
     <Compile Include="Assets\Game\_Scripts\Manager\Wind.cs" />
+    <Compile Include="Assets\Game\_Scripts\Objects Generic\Draganddrop.cs" />
+    <Compile Include="Assets\Game\_Scripts\Objects Generic\object_weight.cs" />
+    <Compile Include="Assets\Game\_Scripts\other\particles.cs" />
+    <Compile Include="Assets\Game\_Scripts\UI\Weight_UI.cs" />
     <Compile Include="Assets\Game\_Scripts\UI\Wind_UI.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>F:/GitHub/UnityGit/Ludum Dare 43/LD43/Game Jam Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

@@ -7,6 +7,9 @@ TagManager:
   - boat
   - crew
   - loot
+  - cannonball
+  - broken
+  - cannonball_player
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class Food : MonoBehaviour
 
     public bool cookOne;
 
-    void cookFood(int amount)
+    public void cookFood(int amount)
     {
         if(amount <= rawFood)
         {

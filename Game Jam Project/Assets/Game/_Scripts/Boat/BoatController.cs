@@ -21,6 +21,11 @@ public class BoatController : MonoBehaviour {
 
     public float weightAffect = 1;
 
+
+    public bool sailLad;
+
+    public bool anchorDown;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -28,8 +33,12 @@ public class BoatController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
         float speed = weightAffect*manager.GetComponent<Wind>().windStrength;
+        if (anchorDown)
+        {
+            speed = 0;
+        }
         float angle = transform.rotation.eulerAngles.z;
 
 
@@ -41,38 +50,45 @@ public class BoatController : MonoBehaviour {
 
 
         //auto
+
         float SailAngle = sail.transform.rotation.eulerAngles.z;
-        //SailAngle = manager.GetComponent<Wind>().windAngle - 90;
+        if (sailLad)
+        {
+            SailAngle = manager.GetComponent<Wind>().windAngle - 90;
 
-        //sail.transform.rotation = Quaternion.Euler(0, 0, SailAngle);
+            sail.transform.rotation = Quaternion.Euler(0, 0, SailAngle);
 
-        //if (sail.transform.localRotation.eulerAngles.z < 20)
-        //{
-        //    sail.transform.localRotation = Quaternion.Euler(0, 0, 20);
-        //}
+            if (sail.transform.localRotation.eulerAngles.z < 20)
+            {
+                sail.transform.localRotation = Quaternion.Euler(0, 0, 20);
+            }
 
-        //else if (sail.transform.localRotation.eulerAngles.z > 160)
-        //{
-        //    sail.transform.localRotation = Quaternion.Euler(0, 0, 160);
-        //}
+            else if (sail.transform.localRotation.eulerAngles.z > 160)
+            {
+                sail.transform.localRotation = Quaternion.Euler(0, 0, 160);
+            }
+        }
+        else
+        {
+            sail.transform.Rotate(0, 0, sailChange);
+
+            if (sail.transform.localRotation.eulerAngles.z < 20)
+            {
+                sail.transform.localRotation = Quaternion.Euler(0, 0, 20);
+            }
+
+            else if (sail.transform.localRotation.eulerAngles.z > 160)
+            {
+                sail.transform.localRotation = Quaternion.Euler(0, 0, 160);
+            }
+        }
+       
+        
 
 
 
         //manual
-        sail.transform.Rotate(0, 0, sailChange);
-
-
-
-
-        if (sail.transform.localRotation.eulerAngles.z < 20)
-        {
-            sail.transform.localRotation = Quaternion.Euler(0, 0, 20);
-        }
-
-        else if (sail.transform.localRotation.eulerAngles.z > 160)
-        {
-            sail.transform.localRotation = Quaternion.Euler(0, 0, 160);
-        }
+       
 
 
        
@@ -158,6 +174,12 @@ public class BoatController : MonoBehaviour {
         else
         {
             sailChange = 0;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.CapsLock))
+        {
+            anchorDown = !anchorDown;
         }
     }
 }

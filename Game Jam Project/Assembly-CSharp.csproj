@@ -61,18 +61,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Food.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\AssignJob.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\Boat_Weight.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\BoatController.cs" />
+    <Compile Include="Assets\Game\_Scripts\Boat\broken.cs" />
+    <Compile Include="Assets\Game\_Scripts\Boat\damagedShip.cs" />
+    <Compile Include="Assets\Game\_Scripts\Boat\Food.cs" />
     <Compile Include="Assets\Game\_Scripts\Camera\boatCamera.cs" />
     <Compile Include="Assets\Game\_Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Game\_Scripts\Cannon Balls\cannon_ball_count.cs" />
+    <Compile Include="Assets\Game\_Scripts\Cannon Balls\cannonBallMove.cs" />
+    <Compile Include="Assets\Game\_Scripts\Cannon Balls\cannonBallPlayer.cs" />
+    <Compile Include="Assets\Game\_Scripts\Cannon Balls\CannonHit.cs" />
+    <Compile Include="Assets\Game\_Scripts\Cannon Balls\fireCannonBall.cs" />
+    <Compile Include="Assets\Game\_Scripts\Cannon Balls\spawnCannonBall.cs" />
     <Compile Include="Assets\Game\_Scripts\crew\reactiveCrew.cs" />
+    <Compile Include="Assets\Game\_Scripts\Enemy\followBoat.cs" />
+    <Compile Include="Assets\Game\_Scripts\Enemy\life.cs" />
     <Compile Include="Assets\Game\_Scripts\Manager\changeScene.cs" />
     <Compile Include="Assets\Game\_Scripts\Manager\Wind.cs" />
     <Compile Include="Assets\Game\_Scripts\Objects Generic\Draganddrop.cs" />
     <Compile Include="Assets\Game\_Scripts\Objects Generic\object_weight.cs" />
     <Compile Include="Assets\Game\_Scripts\other\particles.cs" />
+    <Compile Include="Assets\Game\_Scripts\UI\OnOffScreen.cs" />
     <Compile Include="Assets\Game\_Scripts\UI\Weight_UI.cs" />
     <Compile Include="Assets\Game\_Scripts\UI\Wind_UI.cs" />
     <Reference Include="UnityEditor.StandardEvents">

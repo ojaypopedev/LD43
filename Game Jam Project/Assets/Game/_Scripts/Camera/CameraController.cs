@@ -6,6 +6,9 @@ public class CameraController : MonoBehaviour {
 
     public Transform player;
     public Vector3 Offset;
+    public GameObject UI;
+
+    public float maxZoom = 15f;
 
 	void Start () {
 		
@@ -20,9 +23,32 @@ public class CameraController : MonoBehaviour {
         transform.position = pos;
 
         float size = GetComponent<Camera>().orthographicSize;
-        Offset = new Vector2((size / 7.5f)*5,(size / 7.5f) *-1);
+
+        if (UI.GetComponent<OnOffScreen>().on)
+        {
+            Offset = new Vector2((size / 7.5f) * 5, (size / 7.5f) * -1);
+        }
+        else
+        {
+            Offset = Vector3.zero;
+        }
+       
+        if(GetComponent<Camera>().orthographicSize >= 7.5f && GetComponent<Camera>().orthographicSize <= maxZoom)
+        {
 
         GetComponent<Camera>().orthographicSize += Input.GetAxisRaw("Mouse ScrollWheel");
+        }
         
-	}
+        if(GetComponent<Camera>().orthographicSize < 7.5f)
+        {
+            GetComponent<Camera>().orthographicSize = 7.5f;
+        }
+
+
+        if (GetComponent<Camera>().orthographicSize > maxZoom)
+        {
+            GetComponent<Camera>().orthographicSize = maxZoom;
+        }
+
+    }
 }

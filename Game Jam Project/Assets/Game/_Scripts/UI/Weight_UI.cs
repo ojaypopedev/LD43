@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Weight_UI : MonoBehaviour {
 
     public Boat_Weight weight;
+    public damagedShip damage;
+    public cannon_ball_count cannon;
     public Food foodWeight;
     public Text weightText;
     public Text crewText;
@@ -20,12 +22,22 @@ public class Weight_UI : MonoBehaviour {
     public Text maxText;
 
 
+    public Text brokenText;
+
+    public Text cannonText;
+
+
+
+
 
 
 
 
     void Start () {
         foodWeight = weight.gameObject.GetComponent<Food>();
+        damage = weight.gameObject.GetComponent<damagedShip>();
+        cannon = weight.gameObject.GetComponent<cannon_ball_count>();
+
 	}
 	
 	// Update is called once per frame
@@ -40,7 +52,9 @@ public class Weight_UI : MonoBehaviour {
         cookedText.text = foodWeight.cookedFood.ToString();
         foodText.text = foodWeight.foodWeight.ToString();
 
+        brokenText.text = damage.parts.ToString();
 
 
-    }
+        cannonText.text = cannon.count.ToString();
+   }
 }

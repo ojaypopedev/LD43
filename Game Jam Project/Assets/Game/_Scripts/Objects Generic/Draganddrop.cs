@@ -26,7 +26,7 @@ public class Draganddrop : MonoBehaviour
             Physics.Raycast(ray, out hit);
 
 
-            print(1);
+            //print(1);
             if (hit.collider != null)
             {
                 

@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\bringmethesteak.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\AssignJob.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\Boat_Weight.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\BoatController.cs" />
@@ -86,6 +87,19 @@
     <Compile Include="Assets\Game\_Scripts\UI\OnOffScreen.cs" />
     <Compile Include="Assets\Game\_Scripts\UI\Weight_UI.cs" />
     <Compile Include="Assets\Game\_Scripts\UI\Wind_UI.cs" />
+    <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\Clean.cs" />
+    <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\DirtManager.cs" />
+    <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\DirtRemove.cs" />
+    <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\FollowMouse.cs" />
+    <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\WaterReplenish.cs" />
+    <Compile Include="Assets\Game\Mini Games\cook_Mini\Scripts\Cooking.cs" />
+    <Compile Include="Assets\Game\Mini Games\cook_Mini\Scripts\FoodBin.cs" />
+    <Compile Include="Assets\Game\Mini Games\cook_Mini\Scripts\HandGrab.cs" />
+    <Compile Include="Assets\Game\Mini Games\cook_Mini\Scripts\ServingPlate.cs" />
+    <Compile Include="Assets\Game\Mini Games\cook_Mini\Scripts\SpawnSteak.cs" />
+    <Compile Include="Assets\Game\Mini Games\cook_Mini\Scripts\Steak.cs" />
+    <Compile Include="Assets\Game\Mini Games\cook_Mini\Scripts\SteakCooked.cs" />
+    <Compile Include="Assets\gotoMiniGame.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>F:/GitHub/UnityGit/Ludum Dare 43/LD43/Game Jam Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

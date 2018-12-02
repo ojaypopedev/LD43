@@ -8,6 +8,7 @@ public class Weight_UI : MonoBehaviour {
     public Boat_Weight weight;
     public damagedShip damage;
     public cannon_ball_count cannon;
+    public dirtyBoat dirt;
     public Food foodWeight;
     public Text weightText;
     public Text crewText;
@@ -27,6 +28,11 @@ public class Weight_UI : MonoBehaviour {
     public Text cannonText;
 
 
+    public Text dirtText;
+
+
+
+
 
 
 
@@ -37,8 +43,9 @@ public class Weight_UI : MonoBehaviour {
         foodWeight = weight.gameObject.GetComponent<Food>();
         damage = weight.gameObject.GetComponent<damagedShip>();
         cannon = weight.gameObject.GetComponent<cannon_ball_count>();
+        dirt = weight.gameObject.GetComponent<dirtyBoat>();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -56,5 +63,7 @@ public class Weight_UI : MonoBehaviour {
 
 
         cannonText.text = cannon.count.ToString();
+
+        dirtText.text = dirt.dirtCount.ToString();
    }
 }

@@ -27,7 +27,13 @@ public class Clean : MonoBehaviour {
        // print("Water Left" + Water);
         if (Input.GetMouseButtonDown(0) && Water > 0)
         {
-            Cleaning = true;
+
+            if(GetComponent<FollowMouse>().follow == true)
+            {
+                Cleaning = true;
+            }
+
+          
 
         }
 

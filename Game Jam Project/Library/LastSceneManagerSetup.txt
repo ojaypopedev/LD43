@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/Game/Scenes/SampleScene.unity
+- path: F:/Google Drive/Game Jam Other Bits/Cannon Minigame/Cannon Minigame/Assets/Scenes/Cannon
+    Minigame.unity
   isLoaded: 1
   isActive: 1

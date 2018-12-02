@@ -26,9 +26,14 @@ public class Steak : MonoBehaviour {
 
     public Camera miniGameCam;
 
+
+    public Food food;
+
 	// Use this for initialization
 	void Start () {
 
+
+        food = GameObject.Find("Boat").GetComponent<Food>();
 
         miniGameCam = GameObject.Find("MiniGame Cam").GetComponent<Camera>();
 
@@ -151,6 +156,9 @@ public class Steak : MonoBehaviour {
 
                 plate.GetComponent<ServingPlate>().serve = false;
                 Destroy(gameObject);
+                food.cookedFood++;
+
+
             }
 
         }

@@ -10,6 +10,14 @@ TagManager:
   - cannonball
   - broken
   - cannonball_player
+  - Bin
+  - Hand
+  - Grill
+  - Plate
+  - Steak
+  - Water
+  - Mop
+  - Dirt
   layers:
   - Default
   - TransparentFX

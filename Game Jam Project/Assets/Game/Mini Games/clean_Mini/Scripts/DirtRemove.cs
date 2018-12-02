@@ -13,8 +13,8 @@ public class DirtRemove : MonoBehaviour {
 	void Update () {
         if (Colour.color.a < 0)
         {
-            GameObject.Find("Ship Decking").GetComponent<DirtManager>().DirtToClean -= 1;
-            GameObject.Find("Ship Decking").GetComponent<DirtManager>().Dirtiness-= 1;
+            GameObject.Find("Boat").GetComponent<dirtyBoat>().dirtCount -= 1;
+            //GameObject.Find("Ship Decking").GetComponent<DirtManager>().Dirtiness-= 1;
             Destroy(gameObject);
 
         }

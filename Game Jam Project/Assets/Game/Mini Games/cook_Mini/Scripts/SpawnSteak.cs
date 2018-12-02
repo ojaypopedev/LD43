@@ -20,6 +20,10 @@ public class SpawnSteak : MonoBehaviour {
     public Camera miniGameCam;
 
 
+
+    public Food food;
+
+
     // Use this for initialization
     void Start () {
         //Steak.GetComponent<SpriteRenderer>().enabled = false;
@@ -49,15 +53,17 @@ public class SpawnSteak : MonoBehaviour {
             RaycastHit hit;
             Physics.Raycast(ray, out hit);
 
-            
+           
 
-            print(1);
+
             if (hit.collider != null)
             {
 
+               
+
                 if (hit.collider.gameObject == SteakPile && rawSteakNum > 0)
                 {
-                    rawSteakNum -= 1;
+                    food.rawFood -= 1;
                     Instantiate(Steak, transform.position, Quaternion.identity);
                    
 

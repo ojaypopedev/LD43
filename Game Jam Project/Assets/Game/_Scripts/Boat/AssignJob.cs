@@ -14,7 +14,7 @@ public class AssignJob : MonoBehaviour {
 
     float cookTime = 2f;
     float shootTime = 2f;
-
+    float cleanTime = 2f;
 
     private void Start()
     {
@@ -132,6 +132,23 @@ public class AssignJob : MonoBehaviour {
             {
                 shootTime = 2;
                 cannon.GetComponent<spawnCannonBall>().fire = true;
+            }
+        }
+
+
+        if (job == "clean" && Worker != null)
+        {
+            if (cleanTime > 0)
+            {
+                cleanTime -= Time.deltaTime;
+
+
+            }
+            else
+            {
+                cleanTime = 1;
+                //reduce amount of dirt on the ship
+                //cannon.GetComponent<spawnCannonBall>().fire = true;
             }
         }
 

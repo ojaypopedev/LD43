@@ -36,7 +36,7 @@ public class CameraController : MonoBehaviour {
         if(GetComponent<Camera>().orthographicSize >= 7.5f && GetComponent<Camera>().orthographicSize <= maxZoom)
         {
 
-        GetComponent<Camera>().orthographicSize += Input.GetAxisRaw("Mouse ScrollWheel");
+        GetComponent<Camera>().orthographicSize -= 10*Input.GetAxisRaw("Mouse ScrollWheel");
         }
         
         if(GetComponent<Camera>().orthographicSize < 7.5f)

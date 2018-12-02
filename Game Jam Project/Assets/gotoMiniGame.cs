@@ -7,6 +7,8 @@ public class gotoMiniGame : MonoBehaviour {
     public GameObject noneGame;
     public GameObject cookGame;
     public GameObject cleanGame;
+    public GameObject cannonBottom;
+    public GameObject cannonTop;
 
   
     public string gameActive = "cook"; //cook clean anchor repair cannon//
@@ -37,10 +39,24 @@ public class gotoMiniGame : MonoBehaviour {
             setCamGame(cleanGame);
         }
 
+
+        if (gameActive == "cannonbottom")
+        {
+            setCamGame(cannonBottom);
+        }
+
+        if (gameActive == "cannontop")
+        {
+            setCamGame(cannonTop);
+        }
+
         if (gameActive == "none")
         {
             setCamGame(noneGame);
         }
+
+
+
     }
 
 

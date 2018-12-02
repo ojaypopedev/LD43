@@ -18,6 +18,9 @@ TagManager:
   - Water
   - Mop
   - Dirt
+  - Cannon
+  - CannonBalls
+  - land
   layers:
   - Default
   - TransparentFX
@@ -27,8 +30,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - CursorBall
+  - CannonBall
   - 
   - 
   - 

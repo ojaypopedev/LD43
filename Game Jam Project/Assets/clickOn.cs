@@ -27,10 +27,12 @@ public class clickOn : MonoBehaviour {
             //print(1);
             if (hit.collider != null)
             {
-                print("HERE WE ARE:"+hit.collider.gameObject.name);
+                
 
                 if (hit.collider.gameObject==gameObject)
                 {
+
+                   
                     miniGameCam.GetComponent<gotoMiniGame>().gameActive = miniGame;
                 }
 

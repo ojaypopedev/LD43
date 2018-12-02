@@ -114,10 +114,10 @@ public class AssignJob : MonoBehaviour {
 
         if(job == "look" && Worker != null)
         {
-            cam.GetComponent<CameraController>().maxZoom = 45f;
+            cam.GetComponent<CameraController>().maxZoom = 100f;
         }else if(job == "look")
         {
-            cam.GetComponent<CameraController>().maxZoom = 15f;
+            cam.GetComponent<CameraController>().maxZoom = 30f;
         }
 
         if(job == "shoot" && Worker != null)
@@ -131,7 +131,13 @@ public class AssignJob : MonoBehaviour {
             else
             {
                 shootTime = 2;
-                cannon.GetComponent<spawnCannonBall>().fire = true;
+
+                if(boat.GetComponent<cannon_ball_count>().count > 0)
+                {
+                    cannon.GetComponent<spawnCannonBall>().fire(true);
+                    boat.GetComponent<cannon_ball_count>().count -= 1;
+                }
+              
             }
         }
 
@@ -149,6 +155,15 @@ public class AssignJob : MonoBehaviour {
                 cleanTime = 1;
                 //reduce amount of dirt on the ship
                 //cannon.GetComponent<spawnCannonBall>().fire = true;
+
+                if(boat.GetComponent<dirtyBoat>().dirtCount > 0)
+                {
+                    boat.GetComponent<dirtyBoat>().dirtCount -= 1;
+                    GameObject[] dirts = GameObject.FindGameObjectsWithTag("Dirt");
+                    Destroy(dirts[0]);
+                }
+               
+
             }
         }
 

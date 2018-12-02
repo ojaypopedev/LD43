@@ -64,6 +64,7 @@
     <Compile Include="Assets\bringmethesteak.cs" />
     <Compile Include="Assets\clickOn.cs" />
     <Compile Include="Assets\dirtyBoat.cs" />
+    <Compile Include="Assets\drawlines.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\AssignJob.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\Boat_Weight.cs" />
     <Compile Include="Assets\Game\_Scripts\Boat\BoatController.cs" />
@@ -89,6 +90,10 @@
     <Compile Include="Assets\Game\_Scripts\UI\OnOffScreen.cs" />
     <Compile Include="Assets\Game\_Scripts\UI\Weight_UI.cs" />
     <Compile Include="Assets\Game\_Scripts\UI\Wind_UI.cs" />
+    <Compile Include="Assets\Game\Mini Games\cannon_min\Scripts\BOAT.cs" />
+    <Compile Include="Assets\Game\Mini Games\cannon_min\Scripts\Cannon.cs" />
+    <Compile Include="Assets\Game\Mini Games\cannon_min\Scripts\Reload.cs" />
+    <Compile Include="Assets\Game\Mini Games\cannon_min\Scripts\TargetHit.cs" />
     <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\Clean.cs" />
     <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\DirtManager.cs" />
     <Compile Include="Assets\Game\Mini Games\clean_Mini\Scripts\DirtRemove.cs" />

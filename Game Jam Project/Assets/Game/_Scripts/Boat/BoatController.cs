@@ -26,15 +26,41 @@ public class BoatController : MonoBehaviour {
 
     public bool anchorDown;
 
+
+    bool hitLand;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-        float speed = weightAffect*manager.GetComponent<Wind>().windStrength;
+
+    // Update is called once per frame
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        print("TAG"+collision.gameObject.tag);
+        if(collision.gameObject.tag == "land")
+        {
+            hitLand = true;
+        }
+    }
+
+
+
+    void Update () {
+
+        float speed;
+
+        if (hitLand)
+        {
+            speed = 0;
+        }
+        else
+        {
+             speed = weightAffect * manager.GetComponent<Wind>().windStrength;
+        }
+       
         if (anchorDown)
         {
             speed = 0;
